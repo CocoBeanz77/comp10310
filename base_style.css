@@ -1,0 +1,45 @@
+/*home page layout*/
+.sections{
+    display:grid;
+    height:100vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 1.5fr 1.2fr 0.75fr;
+
+    grid-template-areas:
+		"nav nav nav nav"
+		"sidebar main main main"
+		"sidebar content1 content2 content3"
+		"sidebar footer footer footer";
+}
+
+nav {
+    background: #f1b04c;
+    grid-area: nav;
+}
+
+main {
+    background: #f9ddb1;
+    grid-area: main;
+}
+
+#sidebar {
+    background: #f5c77e;
+    grid-area: sidebar;
+}
+
+#content1 {
+    grid-area: content1;
+}
+
+#content2 {
+    grid-area: content2;
+}
+
+#content3 {
+    grid-area: content3;
+}
+
+footer {
+    grid-area: footer;
+}
