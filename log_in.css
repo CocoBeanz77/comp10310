@@ -1,0 +1,70 @@
+/*general layout*/
+
+.sections{
+    display:grid;
+    height:100vh;
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.5fr 10fr 0.5fr;
+
+    grid-template-areas:
+        "nav nav"
+        "main rbar"
+        "footer footer";
+}
+
+nav {
+    background: #f1b04c;
+    grid-area: nav;
+}
+
+main {
+    background: #f9ddb1;
+    grid-area: main;
+}
+
+footer {
+    background: #f1b04c;
+    grid-area: footer;
+}
+/*Archie welcome image*/
+#top img,
+#bottom img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+/*right bar layout*/
+#rbar {
+    display:grid;
+    background: #f5c77e;
+    grid-area: rbar;
+    border: 5px solid lightpink;
+
+    grid-template-rows: 2fr 1fr 7fr;
+    grid-template-areas:
+        "top"
+        "login"
+        "bottom";
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.images img {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    object-fit: cover;
+
+
+    border-top: 5px solid lightpink;
+
+}
+/*login input*/
