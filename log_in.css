@@ -1,5 +1,4 @@
-/*general layout*/
-
+/*LAYOUT: GENERAL*/
 .sections{
     display:grid;
     height:100vh;
@@ -13,31 +12,11 @@
         "footer footer";
 }
 
-nav {
-    background: #f1b04c;
-    grid-area: nav;
-}
-
-main {
-    background: #f9ddb1;
-    grid-area: main;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-footer {
-    background: #f1b04c;
-    grid-area: footer;
-}
-
-/*right bar layout*/
+/*LAYOUT: RIGHT BAR*/
 #rbar {
     display:grid;
     background: #f5c77e;
     grid-area: rbar;
-
     grid-template-rows: 2fr 1fr 6fr;
     grid-template-areas:
         "top"
@@ -47,52 +26,134 @@ footer {
     overflow: hidden;
 }
 
+/*SECTION: NAV BAR*/
+nav {
+    background: #f1b04c;
+    grid-area: nav;
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+nav span {
+    margin-left: 1vw;
+}
+
+/*SECTION : MAIN BODY*/
+main {
+    background: #f9ddb1;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: clamp(1rem, 5vw, 10rem);
+}
+
+/*h1 changes location based on aspect ratio*/
+@media (max-aspect-ratio: 4/3) {
+    main {
+        flex-direction: column;
+    }
+}
+
+.welcome h1 {
+    font-size: clamp(3rem, 5vh, 5rem);
+    padding: clamp(1rem, 2vw, 10rem);
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: clamp(1rem, 1.75vh, 2rem);
+    padding: clamp(1rem, 2vw, 10rem);
+}
+
+.welcome span {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/*SECTION: RIGHT BAR - ABOVE LOG IN*/
 #top {
     grid-area: top;
 }
 
+/*SECTION: RIGHT BAR - LOG IN*/
 #login {
     grid-area: login;
+    padding: clamp(0.8rem, 1.75vw, 2rem);
 }
 
+#login h1 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+#login label {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+#login button {
+    margin: clamp(0.5rem, 1vw, 2rem);
+    margin-left: 0;
+}
+
+/*SECTION: RIGHT BAR - BELOW LOG IN*/
 #bottom {
     grid-area: bottom;
 }
 
-/*Archie welcome images*/
-#top img,
-#bottom img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.images {
+/*SECTION: FOOTER*/
+footer {
+    background: #f1b04c;
+    grid-area: footer;
+
     display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.images img {
-    flex: 1;
-    width: 100%;
-    object-fit: cover;
-    border-top: 0.2em solid lightpink;
-    border-bottom: 0.2em solid lightpink;
-}
-
-/*login input*/
-
-/*text styles*/
-
+/*CATEGORY: GENERAL*/
 .body {
     font-family: "Courier New", monospace;
-    font-size: 16px;
     color: #333;
     line-height: 1.6;
 }
 
-.h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
+/*CATEGORY: IMAGES*/
+#top img,
+#bottom img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.images img {
+    width: 100%;
+    object-fit: cover;
+    border-top: 0.2em solid lightpink;
+    border-bottom: 0.2em solid lightpink;
+    display: block;
+}
+
+/*two columns of images when screen is wide*/
+@media (min-aspect-ratio: 16/9) {
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .images img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 }
