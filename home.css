@@ -1,0 +1,116 @@
+/*LAYOUT: GENERAL*/
+.sections {
+    display: grid;
+    min-height: 100vh;
+
+    grid-template-rows: 0.5fr 20fr 0.5fr;
+    grid-template-columns: 1.5fr 5fr;
+
+    grid-template-areas:
+        "nav nav"
+        "lbar main"
+        "footer footer";
+
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .sections {
+        grid-template-columns: 1fr 8fr;
+    }
+}
+
+/*LAYOUT: POSTS*/
+.post {
+    display: grid;
+    grid-template-rows: 5fr 1.5fr;
+    aspect-ratio: 3/4;
+}
+
+.post img {
+    height: 100%;
+    width: 100%;
+}
+
+/*SECTION: HEADER*/
+#header {
+    background: #f1b04c;
+    grid-area: nav;
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    position: sticky;
+    top: 0;
+}
+
+#header span {
+    margin-left: 2vw;
+}
+
+#header button {
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+/*SECTION: LEFT BAR*/
+#lbar {
+    grid-area: lbar;
+    background: #f9ddb1;
+    padding: 2rem 1.5rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 5rem
+}
+
+.links a {
+    border-left: 5px solid transparent;
+    font-size: clamp(1rem, 2.5vh, 5rem);
+    margin-bottom: 5rem;
+}
+
+.links a:hover {
+    color: #fd7e14;
+    border-left: 5px solid #fd7e14;
+}
+
+
+/*SECTION: MAIN BODY*/
+main {
+    grid-area: main;
+    background: ivory;
+}
+
+/*blog posts*/
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem;
+}
+
+.post {
+    flex: 1 1 280px;
+    padding: 0.75rem;
+}
+
+/*SECTION: FOOTER*/
+footer {
+    background: #f1b04c;
+    grid-area: footer;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CATEGORY: GENERAL*/
+.body {
+    font-family: "Courier New", monospace;
+    color: #333;
+    line-height: 1.6;
+}

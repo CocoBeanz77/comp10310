@@ -1,0 +1,51 @@
+/*LAYOUT: GENERAL*/
+.sections {
+    display: grid;
+    min-height: 100vh;
+
+    grid-template-rows: 0.5fr 15fr 0.5fr;
+
+    grid-template-areas:
+        "nav"
+        "main"
+        "footer";
+
+}
+
+/*SECTTION: NAV BAR*/
+nav {
+    background: #f1b04c;
+    grid-area: nav;
+
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+nav span {
+    margin-left: 1vw;
+}
+
+/*SECTION: MAIN BODY*/
+main {
+    grid-area: main;
+    background: #f9ddb1;
+}
+
+/*SECTION: FOOTER*/
+footer {
+    background: #f1b04c;
+    grid-area: footer;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CATEGORY: GENERAL*/
+.body {
+    font-family: "Courier New", monospace;
+    color: #333;
+    line-height: 1.6;
+}

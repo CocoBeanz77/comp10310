@@ -3,7 +3,7 @@ function checkUser() {
     const password = document.getElementById("password").value;
 
     if (username === "Archie" && password === "cuti3") {
-        window.location.href = "index.html";
+        window.location.href = "home.html";
         return false;
     } else {
         alert("Uh oh...something has gone CATawampus! Try again!");
