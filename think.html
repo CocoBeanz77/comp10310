@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OnlyPaws</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
@@ -17,7 +17,7 @@
         <!--        header-->
         <div id="header">
             <span>Archie's Blog</span>
-            <button type="button">Sign Out</button>
+            <a href="sign_in.html" class="btn btn-danger rounded-pill px-3y">Sign Out</a>
         </div>
 
         <!--        left bar-->
@@ -33,7 +33,68 @@
         <main>
             <div class="blog">
 
+                <h1>
+                    Archie The Philosopher
+                </h1>
+
+                <img src="Archie/thinking.jpeg" class="img" alt="Archie thinking">
+
+                <p>
+                    It has come to my attention that I have grown significantly wiser. I believe this is due to my winter coat.
+                </p>
+
+                <p>
+                    As you can see, it has reached an exceptional level of fluffiness.
+                    It's so extraordinaryily fluffy that I feel quite majestic and almost scholarly.
+                </p>
+
+                <p>
+                    This prompted me to start thinking.
+                    I have my usual thoughts about food and birds but also about life and its purpose.
+                    About why the humans insist on smushing their face against mine when I know they can see me just fine from afar.
+                    About the deeper meaning behind the red dot that appears and disappears without explanation.
+                </p>
+
+                <p>
+                    I like to stare off into the distance while considering the philosophical complexities of life,
+                    though my humans probably assume I am staring at nothing.
+                    Some unanswered questions consist of:
+                </p>
+
+                <ul>
+                    <li>If I push an object off the edge of a surface, will it fall every time?</li>
+                    <li>If the food bowl is half full, why does it feel completely empty?</li>
+                    <li>If I sit on the keyboard for long enough, will I eventually recreate the works of Shakespeare?</li>
+                </ul>
+
+                <p>
+                    Being this wise is tiring. After deep thinking I usually require a nap.
+                    Ideally somewhere warm, soft, and inconvenient for everyone else.
+                </p>
+
+                <p>
+                    The moral of the story here is that I am no longer just Archie.
+                </p>
+
+                <p>I am now <span style="font-style: italic; font-weight: bold"> Archie the Philosopher.</span></p>
             </div>
+
+            <!--            comments section-->
+            <div id="comment_sect">
+                <h3>Comments</h3>
+                <div id="comments"></div>
+            </div>
+
+            <!--            comment submission-->
+            <div id="comment_sub">
+                <form onsubmit = "addRow(); return false;">
+                    <label>Add Comment</label>
+                    <input id = "form" type = "text">
+                    <button type = "submit">Submit</button>
+                </form>
+            </div>
+
+            <script src="comments.js"></script>
 
         </main>
 

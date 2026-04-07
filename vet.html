@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OnlyPaws</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
@@ -17,7 +17,7 @@
         <!--        header-->
         <div id="header">
             <span>Archie's Blog</span>
-            <button type="button">Sign Out</button>
+            <a href="sign_in.html" class="btn btn-danger rounded-pill px-3y">Sign Out</a>
         </div>
 
         <!--        left bar-->
@@ -32,8 +32,50 @@
 
         <main>
             <div class="blog">
+                <h1>
+                    Vet Visit
+                </h1>
 
+                <img src="Archie/vet.jpeg">
+
+                <p>
+                    I am told I went to the vet.
+                </p>
+
+                <p>
+                    Unfortunately, I have no recollection of this event at all.
+                </p>
+
+                <p>
+                    One moment I was playing chasing with the humans, the next I was in my carrier, and after that...nothing.
+                    Just a vague sense of betrayal.
+                </p>
+
+                <p>
+                    Apparently I was "very brave" so I'll take that.
+                </p>
+
+                <p>
+                    Anyway, I have no memories to share so here is a picture of me as an absolute mess when I arrived home.
+                </p>
             </div>
+
+            <!--            comments section-->
+            <div id="comment_sect">
+                <h3>Comments</h3>
+                <div id="comments"></div>
+            </div>
+
+            <!--            comment submission-->
+            <div id="comment_sub">
+                <form onsubmit = "addRow(); return false;">
+                    <label>Add Comment</label>
+                    <input id = "form" type = "text">
+                    <button type = "submit">Submit</button>
+                </form>
+            </div>
+
+            <script src="comments.js"></script>
 
         </main>
 

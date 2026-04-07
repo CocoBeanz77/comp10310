@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OnlyPaws</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="about.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
@@ -17,7 +17,7 @@
         <!--        header-->
         <div id="header">
             <span>Archie's Blog</span>
-            <button type="button">Sign Out</button>
+            <a href="sign_in.html" class="btn btn-danger rounded-pill px-3y">Sign Out</a>
         </div>
 
         <!--        left bar-->
@@ -30,12 +30,74 @@
             </nav>
         </div>
 
+<!--        main body-->
         <main>
             <div class="blog">
+                <h1>
+                    Christmas Joy
+                </h1>
+
+                <p>
+                    Christmas is a wonderful time in my household.
+                    The humans bring home a giant fluffy tree that's no doubt meant as a toy for my siblings and I.
+                    Everyone gathers around the tree and decorates it with even more toys!
+                    They put baubles, tinsel, and lights all over the tree, which I make sure to offer my help with.
+                </p>
+
+                <img src="Archie/tinsel.jpeg" class="img" alt="Archie playing in tinsel">
+
+                <p>
+                    Once the three is finishes, the real fun begins.
+                    The ornaments dangle and the lights sparkle, but my favourite is the gold tinsel,
+                    so I make it my responsibility to pull as much of it off as possible.
+                    The branches seem to call to me to parkour around at random times which leaves a big mess on the floor,
+                    but at least I'm having the time of my life!
+                </p>
+
+                <p>
+                    Then there are lots and lots of presents,
+                        all wrapped up in colourful paper that makes a crinkling sound when I play with it.
+                    The humans clearly thought a lot about how to make Christmas a special and fun time for us cats.
+                    Of course, I do quality checks on the presents, by sniffing, pawing, and sitting on them.
+                </p>
+
+                <p>
+                    It gets even better once Christmas day comes. Everyone gets special meals, far more extravagant than the usual.
+                    I must say myself that it was all possible due to my helping paw.
+                    I constantly watched over the cooking and carried out countless sniff tests to ensure everything was perfect.
+                </p>
+
+                <p>
+                    After dinner, we all cuddle up front of the fire and open gifts.
+                    This year, I got a mousey toy, a new ribbon to chase, and some catnip (everyone needs to unwind sometimes).
+                </p>
+
+                <p>
+                    By the end of the night, the floor is covered in torn wrapping paper, the humans are giggly from their special juice,
+                        and the tree is much less upright than it was before.
+                    I find myself quite tired by this stage, so I curl up and enjoy a well deserved nap,
+                    until the humans are fast asleep and the tree starts whispering to me again!
+                </p>
+
             </div>
 
-        </main>
+<!--            comments section-->
+            <div id="comment_sect">
+                <h3>Comments</h3>
+                <div id="comments"></div>
+            </div>
 
+<!--            comment submission-->
+            <div id="comment_sub">
+                <form onsubmit = "addRow(); return false;">
+                    <label>Add Comment</label>
+                    <input id = "form" type = "text">
+                    <button type = "submit">Submit</button>
+                </form>
+            </div>
+
+            <script src="comments.js"></script>
+        </main>
 
         <footer>&copy; Archie 2026</footer>
 
