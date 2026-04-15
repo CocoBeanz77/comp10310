@@ -27,17 +27,17 @@ const responses = [
     },
     {
         id: "q4",
-        na: "",
-        correct: "",
-        incorrect: "",
-        explanation: ""
+        na: "What would you eat if you were Archie?",
+        correct: "Yum yum!",
+        incorrect: "Meow. Archie doesn't eat that.",
+        explanation: "Archie loves prawns and will wait in front of the freezer until someone boils some for him!"
     },
     {
         id: "q5",
-        na: "",
-        correct: "",
-        incorrect: "",
-        explanation: ""
+        na: "Psst. There are hints in the answers.",
+        correct: "You must be really smart!",
+        incorrect: "It will be assumed the only reason you selected that is because you have a cat whom you love just as much as Archie's owners love him, every cat deserves all the love!",
+        explanation: "Archie believes that he is the best in the world in every aspect imaginable!"
     },
 ];
 
@@ -45,11 +45,14 @@ const responses = [
 function submit() {
     //define elements in quiz
     const q = responses[current];
-    const selected = document.querySelector(`input[name = "${q.id}"]:checked`);
-    const feedback = document.getElementById(`feedback${current + 1}`);
-    const explanation = document.getElementById(`expl${current + 1}`);
-    const next = document.getElementById(`next${current + 1}`);
-    const content = document.getElementById(`cont${current + 1}`);
+    const question = document.getElementById(q.id);
+
+    //selected = question class with input
+    const selected = question.querySelector(`input[type="radio"]:checked`);
+    const feedback = question.querySelector(".feedback");
+    const explanation = question.querySelector(".explanation");
+    const next = question.querySelector(".next");
+    const content = question.querySelector(".content");
 
     //no answer selected
     if(!selected) {
@@ -58,9 +61,7 @@ function submit() {
     }
 
     //hide answer options
-    if(content) {
-        content.style.display = "none";
-    }
+    content.style.display = "none";
 
     //feedback for correct/incorrect answer
     if(selected.value === "1") {

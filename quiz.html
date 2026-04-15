@@ -38,83 +38,89 @@
             <div class="quiz">
 
 <!--                QUESTION ONE-->
-                <div id="q1">
+                <div id="q1" class="question">
                     <p>1. What colour is Archie?</p>
-                    <div id="cont1">
-                        <label><input type="radio" name="q1" value="1"> Ginger and white</label><br>
-                        <label><input type="radio" name="q1" value="0"> Black</label><br>
-                        <label><input type="radio" name="q1" value="0"> Grey</label><br>
+                    <div class="content">
+                        <label><input type="radio" name="option" value="1"> Ginger and white</label><br>
+                        <label><input type="radio" name="option" value="0"> Black</label><br>
+                        <label><input type="radio" name="option" value="0"> Grey</label><br>
                         <button onclick="submit()">Submit</button>
                     </div>
 
                 <!--                    feedback-->
-                    <p id="feedback1"></p><br>
-                    <p id="expl1"></p>
+                    <p class="feedback"></p><br>
+                    <p class="explanation"></p>
 
                 <!--                    'next' button hidden until feedback-->
-                    <button id="next1" onclick="next()" style="display: none">Next</button>
+                    <button class="next" onclick="next()" style="display: none">Next</button>
                 </div>
 
 <!--                QUESTION TWO-->
-                <div id="q2" style="display: none">
+                <div id="q2" class="question" style="display: none">
                     <p>2. Where did Archie come from?</p>
-                    <div id="cont2">
-                        <label><input type="radio" name="q2" value="0"> A pet shop</label><br>
-                        <label><input type="radio" name="q2" value="1"> A farm</label><br>
-                        <label><input type="radio" name="q2" value="0"> A bin</label><br>
+                    <div class="content">
+                        <label><input type="radio" name="option" value="0"> A pet shop</label><br>
+                        <label><input type="radio" name="option" value="1"> A farm</label><br>
+                        <label><input type="radio" name="option" value="0"> A bin</label><br>
                         <button onclick="submit()">Submit</button>
                     </div>
 <!--                    feedback and next btn-->
-                    <p id="feedback2"></p><br>
-                    <p id="expl2"></p>
-                    <button id="next2" onclick="next()" style="display: none">Next</button>
+                    <p class="feedback"></p><br>
+                    <p class="explanation"></p>
+                    <button class="next" onclick="next()" style="display: none">Next</button>
                 </div>
 
 <!--                QUESTION THREE-->
-                <div id="q3" style="display: none">
+                <div id="q3" class="question" style="display: none">
                     <p>3. What does Archie like to do the most?</p>
-                        <div id="cont3">
-                            <label><input type="radio" name="q3" value="1"> Eat, sleep, and cause chaos</label><br>
-                            <label><input type="radio" name="q3" value="0"> Learn how to fly a plane</label><br>
-                            <label><input type="radio" name="q3" value="0"> Attend airsoft tournaments</label><br>
-                            <button onclick="submit()">Submit</button>
-                        </div>
-<!--                    feedback and next btn-->
-                    <p id="feedback3"></p><br>
-                    <p id="expl3"></p>
-                    <button id="next3" onclick="next()" style="display: none">Next</button>
-                </div>
-
-<!--                QUESTION FOUR-->
-                <div id="q4" style="display: none">
-                    <p>4. What is Archie's favourite food?</p>
-                    <div id="cont4">
-                        <label><input type="radio" name="q4" value="0"> Rice</label><br>
-                        <label><input type="radio" name="q4" value="0"> Pickles</label><br>
-                        <label><input type="radio" name="q4" value="1"> Prawns</label><br>
+                    <div class="content">
+                        <label><input type="radio" name="option" value="1"> Eat, sleep, and cause chaos</label><br>
+                        <label><input type="radio" name="option" value="0"> Learn how to fly a plane</label><br>
+                        <label><input type="radio" name="option" value="0"> Attend airsoft tournaments</label><br>
                         <button onclick="submit()">Submit</button>
                     </div>
 <!--                    feedback and next btn-->
-                    <p id="feedback4"></p><br>
-                    <p id="expl4"></p>
-                    <button id="next4" onclick="next()" style="display: none">Next</button>
+                    <p class="feedback"></p><br>
+                    <p class="explanation"></p>
+                    <button class="next" onclick="next()" style="display: none">Next</button>
+                </div>
+
+<!--                QUESTION FOUR-->
+                <div id="q4" class="question" style="display: none">
+                    <p>4. What is Archie's favourite food?</p>
+                    <div class="content">
+                        <label><input type="radio" name="option" value="0"> Rice</label><br>
+                        <label><input type="radio" name="option" value="0"> Pickles</label><br>
+                        <label><input type="radio" name="option" value="1"> Prawns</label><br>
+                        <button onclick="submit()">Submit</button>
+                    </div>
+<!--                    feedback and next btn-->
+                    <p class="feedback"></p><br>
+                    <p class="explanation"></p>
+                    <button class="next" onclick="next()" style="display: none">Next</button>
                 </div>
 
 <!--                QUESTION FIVE-->
-                <div id="q5" style="display: none">
+                <div id="q5" class="question" style="display: none">
                     <p>5. Who is the bestest and fluffiest and most majestic cat in the universe?</p>
-                    <div id="cont5">
-                        <label><input type="radio" name="q5" value="0"> Nope</label><br>
-                        <label><input type="radio" name="q5" value="0"> Keep looking</label><br>
-                        <label><input type="radio" name="q5" value="0"> Almost there...</label><br>
-                        <label><input type="radio" name="q5" value="1"> Archie, of course!</label><br>
-                        <label><input type="radio" name="q5" value="0"> You've gone too far!</label><br>
+                    <div class="content">
+                        <label><input type="radio" name="option" value="0"> Nope</label><br>
+                        <label><input type="radio" name="option" value="0"> Keep looking</label><br>
+                        <label><input type="radio" name="option" value="0"> Almost there...</label><br>
+                        <label><input type="radio" name="option" value="1"> Archie, of course!</label><br>
+                        <label><input type="radio" name="option" value="0"> You've gone too far!</label><br>
                     <button onclick="submit()">Submit</button>
                     </div>
 <!--                    feedback and next btn-->
-                    <p id="feedback5"></p><br>
-                    <p id="expl5"></p>
-                    <button id="next5" onclick="next()" style="display: none">Next</button>
+                    <p class="feedback"></p><br>
+                    <p class="explanation"></p>
+                    <button class="next" onclick="next()" style="display: none">Next</button>
+                </div>
+
+<!--                RESULTS-->
+                <div id="results" style="display: none">
+                    <p>Results</p>
+                    <p id="resultNum"></p>
                 </div>
             </div>
 
