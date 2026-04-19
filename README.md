@@ -1,3 +1,3 @@
 # comp10310
--Business website
--min 6 HTMP pages
+-Hobby website (my cat is my hobby)
+-min 6 HTML pages
