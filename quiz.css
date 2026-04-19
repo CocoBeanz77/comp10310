@@ -84,17 +84,59 @@ main h1 {
     padding: 4rem 1rem 3rem 1rem;
 }
 
-main p, ul{
+main p{
     text-align: justify;
     font-size: clamp(1rem, 1.5vh, 2rem);
 }
 
-.blog img {
-    float: right;
-    width: auto;
-    max-height: 30vh;
-    max-width: 50vw;
-    margin: 0 0 1.5rem 2rem;
+/*SECTION: QUIZ*/
+.question {
+    background: #fff7ea;
+    border: 2px solid #f1b04c;
+    border-radius: 1rem;
+    padding: 3rem;
+    padding-bottom: 1rem;
+    margin: 3rem auto;
+    max-width: 75rem;
+}
+
+.question p {
+    font-size: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.content label {
+    background: #f9ddb1;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.content label {
+    font-size: 1.2rem;
+}
+
+.feedback {
+    margin-top: 2rem;
+}
+
+.explanation {
+    margin-bottom: 1rem;
+}
+
+.quiz button {
+    margin-top: 1rem;
+}
+
+.next {
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 /*SECTION: COMMENTS*/

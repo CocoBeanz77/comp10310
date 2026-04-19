@@ -73,9 +73,9 @@
 main {
     grid-area: main;
     background: #f9ddb1;
-    padding-left: 1vw;
-    padding-right: 5vw;
-    padding-bottom: 3vh;
+    padding-left: 2vw;
+    padding-right: 6.5vw;
+    padding-bottom: 4vh;
 }
 
 main h1 {
@@ -86,7 +86,7 @@ main h1 {
 
 main p, ul{
     text-align: justify;
-    font-size: clamp(1rem, 1.5vh, 2rem);
+    font-size: clamp(1.5rem, 1.5vh, 3rem);
 }
 
 .blog img {

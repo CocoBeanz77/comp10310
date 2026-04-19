@@ -69,7 +69,6 @@
     border-left: 5px solid #fd7e14;
 }
 
-
 /*SECTION: MAIN BODY*/
 main h1 {
     text-align: center;
@@ -78,7 +77,7 @@ main h1 {
 }
 
 main h5 {
-    font-size: clamp(1rem, 1.5vh, 2rem);
+    font-size: 1.25rem;
     padding: 0.5rem 0 0 0;
 }
 
@@ -89,11 +88,13 @@ main {
 
 /*LAYOUT: POSTS*/
 .post {
-    display: grid;
-    grid-template-rows: 5fr 1.5fr;
-    aspect-ratio: 3/4;
     flex: 1 1 280px;
-    padding: 0.75rem;
+    padding: 2rem;
+    max-width: 25rem;
+
+    background: #fff7ea;
+    border: 2px solid #f1b04c;
+    border-radius: 1rem;
 }
 
 .post a {
@@ -102,21 +103,24 @@ main {
     align-items: center;
 }
 
-.post img {
-    width: auto;
-    max-height: 50vh;
+.post img, video {
+    width: 100%;
+    max-height: 40vh;
     object-fit: contain;
-    max-width: 100%;
+    border-radius: 0.5rem;
 }
 
 .post h5 {
     text-align: left;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
 }
 
 #blog {
     display: flex;
     flex-wrap: wrap;
-    padding: 0.75rem;
+    padding: 3rem;
+    gap: 2rem;
 }
 
 .title:hover{
