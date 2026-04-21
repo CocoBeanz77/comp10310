@@ -86,7 +86,11 @@ function next() {
     current++;
     //check if next question exists and display, or display result
     if (current < responses.length) {
-        document.getElementById(responses[current].id).style.display = "block";
+        const nextQ = document.getElementById(responses[current].id);
+        nextQ.style.display = "block";
+
+        //add class to trigger fade affect
+        nextQ.classList.add("show");
     } else {
         results();
     }
@@ -97,6 +101,24 @@ function results() {
     const resultBox = document.getElementById("results");
     const resultNum = document.getElementById("resultNum");
 
-    resultBox.style.display = "Block";
-    resultNum.textContent = `You got ${score} out of ${responses.length} correct!`;
+    resultBox.style.display = "block";
+
+    // calculate result as percentage, allows change in number of questions
+    const percent = score/responses.length;
+
+    // custom message based on score percentage
+    let message = "";
+    if (percent === 1) {
+        message = `A+! You got a perfect ${score} out of ${responses.length} correct! Archie is very impressed.`;
+    } else if (percent >= 0.8) {
+        message = `Very impressive! You got ${score} out of ${responses.length}. You'll be an Archie expert in no time.`;
+    } else if (percent >= 0.6) {
+        message = `Pretty good! You got ${score} out of ${responses.length}. You clearly know your fair share of Archie facts.`
+    } else if (percent >= 0.4) {
+        message = `Good effort! You got ${score} out of ${responses.length}. You're definitely on the right track.`
+    } else if (percent >= 0) {
+        message = `Don't give up! You got ${score} out of ${responses.length}, but you can always try again!`
+    }
+
+    resultNum.textContent = message;
 }

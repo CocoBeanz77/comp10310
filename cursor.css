@@ -1,0 +1,27 @@
+/*default*/
+body {
+    cursor: url("cursor/normal.cur"), auto;
+}
+
+/*link*/
+a,
+button,
+.post,
+label,
+input[type="radio"] {
+    cursor: url("cursor/normal.cur"), pointer;
+}
+
+/*typing*/
+input[type="text"], textarea {
+    cursor: url("cursor/text.cur"), text;
+}
+
+/*hover*/
+a:hover,
+button:hover,
+label:hover,
+input[type="radio"]:hover,
+button[type="submit"]:hover {
+    cursor: url("cursor/link.cur"), pointer;
+}

@@ -3,7 +3,7 @@
     display: grid;
     min-height: 100vh;
 
-    grid-template-rows: 0.5fr 20fr 0.5fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: 1.5fr 5fr;
 
     grid-template-areas:
@@ -98,10 +98,17 @@ main p{
     padding-bottom: 1rem;
     margin: 3rem auto;
     max-width: 75rem;
+
+    opacity: 0;
+    transition: opacity 0.45s ease;
 }
 
 .question p {
     font-size: 1.5rem;
+}
+
+.question.show {
+    opacity: 1;
 }
 
 .content {
@@ -130,31 +137,85 @@ main p{
     margin-bottom: 1rem;
 }
 
+/*START - CODE FROM GETCSSSCAN.COM ALTERED TO FIT THEME*/
 .quiz button {
+    align-items: center;
+    background-color: #f9ddb1;
+    border: 2px solid #f1b04c;
+    border-radius: 1rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    height: 48px;
+    width: 100%;
+    padding: 0 1.5rem;
+    position: relative;
     margin-top: 1rem;
 }
+
+/* shadow layer */
+.quiz button {
+    background-color: #f9ddb1;
+    border: 2px solid #f1b04c;
+    border-radius: 1rem;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 6px 6px 0 #f1b04c;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quiz button:hover {
+    transform: translate(4px, 4px);
+    box-shadow: 2px 2px 0 #f1b04c;
+}
+
+.quiz button:active {
+    transform: translate(6px, 6px);
+    box-shadow: 0 0 0 #f1b04c;
+    background-color: #fff7ea;
+}
+/*END*/
 
 .next {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-/*SECTION: COMMENTS*/
-#comment_sect {
-    border-top: 1px solid #f1b04c;
+/*SECTION: RESULTS*/
+#results {
+    text-align: center;
+    background: #fff7ea;
+    border: 2px solid #f1b04c;
+    border-radius: 1rem;
+    padding: 3rem;
+    padding-bottom: 2.5rem;
+    margin: 3rem auto;
+    max-width: 75rem;
+    box-shadow: 0 8px 20px #f1b04c;
 }
 
-#comment_sect h3 {
-    margin-bottom: 1rem;
+#gif {
+    height: 100%;
+    max-height: 50vh;
+    border-radius: 0.75rem;
+    margin: 1rem auto;
+}
+
+#resultNum {
     font-size: 1.5rem;
-    padding-top: 1rem;
-}
-
-#comments p {
-    background: #f1b04c;
-    padding: 0.75rem 1rem;
-    border-radius: clamp(0.5rem, 1.75vh, 2rem);
-    margin-bottom: 0.75rem;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
 /*SECTION: FOOTER*/
